@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Planificación financiera tecnológica</title>
+<style>
+:root{--bg:#08111f;--panel:#101d30;--panel2:#14243a;--line:#243650;--text:#eaf2ff;--muted:#91a4bf;--cyan:#50e3d2;--blue:#6ea8fe;--violet:#b69cff;--orange:#ffbd69;--red:#ff7888;--green:#63e6a5;--shadow:0 18px 55px #0005}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 80% 0%,#17365a 0,transparent 32%),radial-gradient(circle at 0% 35%,#142747 0,transparent 27%),var(--bg);color:var(--text);font:15px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif}
+a{color:inherit;text-decoration:none}.shell{display:grid;grid-template-columns:255px 1fr;min-height:100vh}.sidebar{position:sticky;top:0;height:100vh;padding:25px 17px;background:#091525dd;border-right:1px solid var(--line);backdrop-filter:blur(16px);display:flex;flex-direction:column;z-index:5}.brand{display:flex;align-items:center;gap:11px;padding:5px 9px 27px}.logo{width:39px;height:39px;border-radius:13px;background:linear-gradient(135deg,var(--cyan),#6388ff);display:grid;place-items:center;color:#071321;font-weight:900;font-size:20px;box-shadow:0 8px 25px #50e3d244}.brand strong{font-size:17px;letter-spacing:.4px}.brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:1.8px}.navlabel{color:#657b99;font-size:10px;font-weight:800;letter-spacing:1.7px;padding:12px 11px 8px}.nav a{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:10px;color:#a9bad1;font-size:13px;margin:2px 0;transition:.2s}.nav a:hover,.nav a.active{background:#1a304b;color:white}.nav a.active{box-shadow:inset 3px 0 var(--cyan)}.nav .ico{width:20px;text-align:center;font-size:16px}.sidefoot{margin-top:auto;border:1px solid var(--line);border-radius:13px;padding:13px;background:#102037}.sidefoot small{color:var(--muted)}.sidefoot b{display:block;font-size:12px;margin:4px 0}.main{min-width:0;padding:27px clamp(18px,4vw,55px) 60px;max-width:1600px;width:100%;margin:auto}.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px;gap:15px}.crumb{color:var(--muted);font-size:12px}.crumb b{color:var(--text)}.topright{display:flex;gap:10px;align-items:center}.pill{border:1px solid var(--line);border-radius:999px;padding:7px 12px;color:#b8c8df;font-size:11px;background:#102037}.statusdot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--green);margin-right:7px;box-shadow:0 0 12px var(--green)}
+.hero{position:relative;overflow:hidden;border:1px solid #31506f;border-radius:23px;padding:clamp(25px,4vw,48px);background:linear-gradient(112deg,#142c49 0%,#15223c 56%,#28214b 100%);box-shadow:var(--shadow);margin-bottom:23px}.hero:before{content:"";position:absolute;width:360px;height:360px;border:1px solid #ffffff12;border-radius:50%;right:-85px;top:-185px;box-shadow:0 0 0 35px #ffffff08,0 0 0 70px #ffffff05}.eyebrow{color:var(--cyan);font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase}.hero h1{font-size:clamp(29px,4.2vw,48px);line-height:1.08;max-width:740px;margin:13px 0 14px;letter-spacing:-1.5px}.hero p{color:#bdcce0;max-width:720px;margin:0 0 23px}.hero-actions{display:flex;gap:10px;flex-wrap:wrap}.btn{border:0;border-radius:10px;padding:11px 16px;font-weight:750;font-size:12px;cursor:pointer;transition:.2s}.btn:hover{transform:translateY(-2px);filter:brightness(1.1)}.primary{background:linear-gradient(100deg,var(--cyan),#8ab9ff);color:#071522;box-shadow:0 8px 24px #50e3d22b}.secondary{background:#ffffff12;border:1px solid #ffffff26;color:#eaf2ff}.ghost{background:#182a42;border:1px solid var(--line);color:#d8e7fb}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin-bottom:27px}.stat,.card{background:linear-gradient(145deg,#122239,#0e1a2c);border:1px solid var(--line);border-radius:16px;box-shadow:0 8px 30px #0002}.stat{padding:17px}.stat .label{color:var(--muted);font-size:11px}.stat strong{display:block;font-size:24px;margin:6px 0 1px;letter-spacing:-.6px}.stat small{color:#8198b7;font-size:10px}.stat .symbol{float:right;font-size:20px;color:var(--cyan)}.section{margin:35px 0;scroll-margin-top:20px}.sectionhead{display:flex;justify-content:space-between;align-items:end;gap:15px;margin-bottom:15px}.sectionhead h2{font-size:21px;letter-spacing:-.5px;margin:3px 0}.sectionhead p{color:var(--muted);font-size:12px;margin:0}.kicker{color:var(--cyan);font-size:10px;font-weight:800;letter-spacing:1.7px;text-transform:uppercase}.grid2{display:grid;grid-template-columns:1.15fr .85fr;gap:15px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.card{padding:19px;min-width:0}.card h3{font-size:14px;margin:0 0 12px}.card p{color:#a8bad1;font-size:12px;margin:0 0 10px}.scenario{position:relative;overflow:hidden;cursor:pointer;transition:.2s}.scenario:hover{transform:translateY(-3px);border-color:#54759a}.scenario.selected{border-color:var(--cyan);box-shadow:0 0 0 1px #50e3d233,0 10px 35px #0003}.scenario .tag{font-size:9px;letter-spacing:1px;text-transform:uppercase;padding:5px 8px;border-radius:999px;background:#50e3d21a;color:var(--cyan);display:inline-block}.scenario h3{margin:12px 0 5px}.scenario p{min-height:55px}.scenario .mini{font-size:11px;color:#8298b6}.formrow{display:flex;flex-wrap:wrap;gap:10px;align-items:center}.field{display:flex;flex-direction:column;gap:5px;min-width:125px}.field label{color:var(--muted);font-size:10px}.field input,.field select{background:#0a1728;color:var(--text);border:1px solid #304762;border-radius:8px;padding:9px 10px;min-width:0;font:inherit;font-size:12px}.matrixwrap{overflow-x:auto;margin-top:12px}.matrix{border-collapse:separate;border-spacing:5px;width:100%;min-width:410px}.matrix th{color:#8da4c1;font-size:10px;font-weight:650}.matrix td input{width:100%;min-width:58px;text-align:center;background:#091728;color:#e9f4ff;border:1px solid #2b4562;border-radius:7px;padding:8px 4px;font:12px ui-monospace,monospace}.matrix td input:focus,.field input:focus{outline:1px solid var(--cyan);border-color:var(--cyan)}.matrix .rhs input{border-color:#3a827d;background:#102a32}.eq{font-family:ui-monospace,monospace;color:#c8dcf5;font-size:12px;line-height:2}.note{border-left:3px solid var(--cyan);padding:10px 13px;background:#50e3d20c;color:#a9c4d6;font-size:11px;border-radius:0 8px 8px 0;margin-top:12px}.resultgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin:12px 0}.result{background:#0a192a;border:1px solid #263d59;border-radius:10px;padding:12px}.result small{color:var(--muted);display:block;font-size:10px}.result b{font-size:17px;color:var(--cyan);font-variant-numeric:tabular-nums}.result span{display:block;font-size:9px;color:#7e94b2}.tablewrap{overflow:auto}table.data{width:100%;border-collapse:collapse;font-size:11px;min-width:500px}table.data th{text-align:left;color:#8fa6c2;font-weight:700;background:#0b192a;padding:10px;border-bottom:1px solid var(--line)}table.data td{padding:10px;border-bottom:1px solid #20334b;color:#c6d5e8}table.data tr:last-child td{border-bottom:0}.good{color:var(--green)!important}.warn{color:var(--orange)!important}.bad{color:var(--red)!important}.chartbox{height:230px;position:relative}.chartbox canvas{width:100%;height:100%}.qa-pass{color:var(--green);font-weight:800}.qa-pending{color:var(--orange);font-weight:800}.footer{border-top:1px solid var(--line);padding-top:20px;color:#7187a5;font-size:10px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.toast{position:fixed;right:22px;bottom:22px;background:#153c39;border:1px solid #3a9c8a;color:#dffff6;padding:12px 17px;border-radius:11px;box-shadow:var(--shadow);font-size:12px;opacity:0;transform:translateY(12px);transition:.25s;pointer-events:none;z-index:20}.toast.show{opacity:1;transform:none}.muted{color:var(--muted)}.small{font-size:10px}.mono{font-family:ui-monospace,monospace}.twoactions{display:flex;gap:8px;flex-wrap:wrap}.hide-mobile{display:inline}
+@media(max-width:1050px){.shell{grid-template-columns:210px 1fr}.stats{grid-template-columns:repeat(2,1fr)}.grid3{grid-template-columns:1fr}.scenario p{min-height:0}}
+@media(max-width:760px){.shell{display:block}.sidebar{position:relative;height:auto;padding:12px 14px;border-right:0;border-bottom:1px solid var(--line)}.brand{padding:2px 5px 10px}.nav{display:flex;overflow-x:auto;gap:4px}.navlabel,.sidefoot{display:none}.nav a{white-space:nowrap;padding:8px 10px}.nav a .ico{display:none}.main{padding:18px 14px 40px}.topbar{margin-bottom:17px}.grid2{grid-template-columns:1fr}.stats{gap:8px}.stat{padding:13px}.stat strong{font-size:20px}.hero{padding:25px 21px}.resultgrid{grid-template-columns:repeat(2,1fr)}.sectionhead{align-items:start;flex-direction:column}.hide-mobile{display:none}}
+</style>
+</head>
+<body>
+<div class="shell">
+<aside class="sidebar">
+ <div class="brand"></strong><small>METODOS NUMERICOS</small></div>
+ <div class="navlabel">ESPACIO DE TRABAJO</div>
+ <nav class="nav">
+  <a class="active" href="#inicio"><span class="ico">⌂</span>Inicio</a>
+  <a href="#caso"><span class="ico">◈</span>Caso de estudio</a>
+  <a href="#modelo"><span class="ico">▦</span>Formulación</a>
+  <a href="#datos"><span class="ico">⌘</span>Entrada de datos</a>
+  <a href="#escenarios"><span class="ico">◉</span>Escenarios</a>
+  <a href="#solucion"><span class="ico">∑</span>Solución directa</a>
+  <a href="#procedimiento"><span class="ico">≡</span>Procedimiento paso a paso</a>
+  <a href="#algoritmos"><span class="ico">⟳</span>GCP vs GC</a>
+  <a href="#errores"><span class="ico">▤</span>Análisis de errores</a>
+  <a href="#qa"><span class="ico">✓</span>Pruebas QA</a>
+  <a href="#conclusiones"><span class="ico">✧</span>Conclusiones</a>
+ </nav>
+ <div class="sidefoot"><small>PROYECTO ACADÉMICO</small><b>Métodos Numéricos · UMSA</b><small>Ingeniería de Sistemas</small></div>
+</aside>
+<main class="main">
+ <div class="topbar"><div class="crumb"><b>Panel de análisis</b></div><div class="topright"><span class="pill"><i class="statusdot"></i>Motor numérico activo</span><span class="pill">UMSA · 2026</span></div></div>
+ <section class="hero" id="inicio">
+  <div class="eyebrow">✦ MÉTODOS NUMÉRICOS · DESAFÍO ACADÉMICO</div>
+  <h1>Planificación financiera para <span style="color:var(--cyan)">sistemas tecnológicos.</span></h1>
+  <p>Un laboratorio interactivo para distribuir recursos entre unidades de una empresa tecnológica y evaluar cómo responde el modelo ante distintos escenarios financieros mediante Gradientes Conjugados Precondicionado.</p>
+  <div class="hero-actions"><a class="btn primary" href="#escenarios">Explorar escenarios&nbsp; ↗</a><a class="btn secondary" href="#modelo">Ver modelo matemático</a></div>
+ </section>
+ <div class="stats">
+  <div class="stat"><span class="symbol">▦</span><div class="label">Variables del modelo</div><strong>04</strong><small>Unidades organizacionales</small></div>
+  <div class="stat"><span class="symbol">◎</span><div class="label">Escenarios</div><strong>03</strong><small>Ideal · Estrés · Escalamiento</small></div>
+  <div class="stat"><span class="symbol">⌁</span><div class="label">Tolerancia relativa</div><strong>10⁻⁶</strong><small>Criterio de convergencia</small></div>
+  <div class="stat"><span class="symbol">✓</span><div class="label">Validación matemática</div><strong id="validStat">OK</strong><small id="validSub">Simetría y positividad</small></div>
+ </div>
+ <section class="section" id="caso">
+  <div class="sectionhead"><div><div class="kicker">01 / Contexto organizacional</div><h2>Caso de estudio</h2><p>La empresa tecnológica como sistema integrado de recursos y procesos.</p></div></div>
+  <div class="grid2">
+   <div class="card"><h3>El reto financiero</h3><p>Una empresa tecnológica debe planificar y distribuir su presupuesto entre cuatro unidades que dependen unas de otras. Una decisión de inversión en infraestructura puede afectar el desarrollo de software, la seguridad de la información y la capacidad de soporte.</p><p>El modelo representa estas relaciones mediante un sistema lineal simétrico y definido positivo. Los coeficientes son <b>datos académicos simulados</b>, no registros contables de una empresa real.</p><div class="note">Enfoque de Ingeniería de Sistemas: modelado de procesos, interdependencia organizacional, gestión de recursos y apoyo cuantitativo a la toma de decisiones.</div></div>
+   <div class="card"><h3>Unidades y responsabilidades</h3>
+    <div class="resultgrid" style="grid-template-columns:1fr 1fr">
+     <div class="result"><small>01 · INFRAESTRUCTURA</small><b>Redes</b><span>Servidores, equipos y nube</span></div>
+     <div class="result"><small>02 · DESARROLLO</small><b>Software</b><span>Sistemas y mantenimiento</span></div>
+     <div class="result"><small>03 · SEGURIDAD</small><b>InfoSec</b><span>Riesgos y protección de datos</span></div>
+     <div class="result"><small>04 · SOPORTE</small><b>Servicios TI</b><span>Atención e incidencias</span></div>
+    </div>
+   </div>
+  </div>
+ </section>
+ <section class="section" id="modelo">
+  <div class="sectionhead"><div><div class="kicker">02 / Modelo matemático</div><h2>Variables y formulación</h2><p>El vector x representa la asignación presupuestaria, en miles de bolivianos.</p></div></div>
+  <div class="card">
+   <div class="tablewrap"><table class="data"><thead><tr><th>Variable</th><th>Unidad organizacional</th><th>Magnitud</th><th>Unidad</th></tr></thead><tbody>
+    <tr><td class="mono">x₁</td><td>Infraestructura y redes</td><td>Asignación presupuestaria</td><td>Miles de Bs</td></tr>
+    <tr><td class="mono">x₂</td><td>Desarrollo de software</td><td>Asignación presupuestaria</td><td>Miles de Bs</td></tr>
+    <tr><td class="mono">x₃</td><td>Seguridad informática</td><td>Asignación presupuestaria</td><td>Miles de Bs</td></tr>
+    <tr><td class="mono">x₄</td><td>Soporte técnico</td><td>Asignación presupuestaria</td><td>Miles de Bs</td></tr>
+   </tbody></table></div>
+   <div class="note">Modelo simplificado de equilibrio y ponderación de necesidades: A·x = b. Los elementos aᵢⱼ expresan la ponderación propia de cada unidad (diagonal) o la relación de dependencia entre dos unidades (fuera de diagonal). No son porcentajes contables observados.</div>
+  </div>
+ </section>
+ <section class="section" id="escenarios">
+  <div class="sectionhead"><div><div class="kicker">03 / Simulación financiera</div><h2>Selecciona un escenario</h2><p>Cada escenario conserva las cuatro variables y cambia las condiciones del modelo.</p></div><span class="pill" id="scenarioPill">Escenario ideal activo</span></div>
+  <div class="grid3">
+   <div class="card scenario selected" data-scenario="ideal"><span class="tag">01 · Estable</span><h3>Escenario ideal</h3><p>Costos relativamente estables y relaciones operativas moderadas entre las unidades.</p><div class="mini">κ(A) bajo · Matriz equilibrada</div></div>
+   <div class="card scenario" data-scenario="stress"><span class="tag" style="color:var(--orange);background:#ffbd6918">02 · Perturbación</span><h3>Bajo estrés financiero</h3><p>Aumento de costos tecnológicos y mayores requerimientos de financiamiento.</p><div class="mini">Cambios en A y en b</div></div>
+   <div class="card scenario" data-scenario="bad"><span class="tag" style="color:var(--violet);background:#b69cff18">03 · Escalas distintas</span><h3>Mal condicionado</h3><p>Magnitudes muy diferentes entre unidades; se aplica Jacobi para corregir el escalamiento.</p><div class="mini">κ(A) elevado · Jacobi</div></div>
+  </div>
+ </section>
+ <section class="section" id="datos">
+  <div class="sectionhead"><div><div class="kicker">04 / Laboratorio de datos</div><h2>Entrada editable del sistema</h2><p>Modifica los coeficientes y ejecuta nuevamente el cálculo. Se validará A antes de resolver.</p></div><div class="twoactions"><button class="btn ghost" id="resetBtn">↺ Restaurar escenario</button><button class="btn primary" id="runBtn">▶ Ejecutar análisis</button></div></div>
+  <div class="grid2">
+   <div class="card"><h3>Matriz de coeficientes A</h3><div class="matrixwrap"><table class="matrix" id="matrixA"></table></div><div class="note">La matriz debe ser cuadrada, simétrica y definida positiva. Edita cualquier celda para probar el modelo.</div></div>
+   <div class="card"><h3>Vector independiente b</h3><div class="matrixwrap"><table class="matrix" id="vectorB"></table></div>
+    <div class="formrow" style="margin-top:15px">
+     <div class="field"><label>VECTOR INICIAL</label><select id="x0"><option value="zero">x₀ = (0, 0, 0, 0)</option></select></div>
+     <div class="field"><label>PRECONDICIONADOR</label><select id="precond"><option value="auto">Automático por escenario</option><option value="identity">Identidad</option><option value="jacobi">Jacobi</option></select></div>
+     <div class="field"><label>TOLERANCIA</label><input id="tol" type="number" min="0.0000000001" step="any" value="0.000001"></div>
+    </div>
+   </div>
+  </div>
+  <div id="validation" class="note" style="margin-top:13px">✓ Matriz validada: simétrica y definida positiva.</div>
+ </section>
+ <section class="section" id="solucion">
+  <div class="sectionhead"><div><div class="kicker">05 / Método directo</div><h2>Solución numérica de referencia</h2><p>Factorización de Cholesky: A = L·Lᵀ, seguida de sustitución hacia adelante y atrás.</p></div></div>
+  <div class="card"><div class="formrow" style="justify-content:space-between"><h3>Asignación presupuestaria calculada</h3><span class="pill" id="directStatus">Referencia calculada</span></div><div class="resultgrid" id="referenceResults"></div><div class="note" id="referenceNote">Solución obtenida mediante método directo.</div></div>
+ </section>
+ <section class="section" id="procedimiento">
+  <div class="sectionhead"><div><div class="kicker">06 / Desarrollo paso a paso</div><h2>Procedimiento de solución de cada escenario</h2><p>Visualiza las operaciones matemáticas, sustituciones e iteraciones que producen los resultados.</p></div><span class="pill">Detalle reproducible</span></div>
+  <div class="card">
+   <div class="formrow" style="justify-content:space-between;align-items:center">
+    <div><h3 style="margin-bottom:4px">Selecciona el procedimiento</h3><div class="small muted">Los pasos se actualizan con el escenario y los datos que tengas cargados.</div></div>
+    <div class="formrow">
+     <select id="procedureMethod" class="field" style="background:#0a1728;color:var(--text);border:1px solid #304762;border-radius:8px;padding:9px;font:inherit;font-size:12px">
+      <option value="chol">Método directo · Cholesky</option>
+      <option value="gc">Gradientes Conjugados · GC</option>
+      <option value="gcp">Gradientes Conjugados Precondicionado · GCP</option>
+     </select>
+     <button class="btn primary" id="procedureBtn">Mostrar procedimiento</button>
+    </div>
+   </div>
+   <div id="procedureContent" style="margin-top:15px">
+    <div class="note">Pulsa «Mostrar procedimiento» para desarrollar las operaciones del escenario activo.</div>
+   </div>
+  </div>
+ </section>
+ <section class="section" id="algoritmos">
+  <div class="sectionhead"><div><div class="kicker">06 / Métodos iterativos</div><h2>Gradientes Conjugados vs. GCP</h2><p>Comparación con el mismo sistema, vector inicial y tolerancia.</p></div></div>
+  <div class="grid2">
+   <div class="card"><h3>Desempeño del algoritmo</h3><div class="resultgrid" style="grid-template-columns:1fr 1fr">
+    <div class="result"><small>ITERACIONES GC</small><b id="gcIter">—</b><span>Sin precondicionar</span></div>
+    <div class="result"><small>ITERACIONES GCP</small><b id="gcpIter">—</b><span>Precondicionado</span></div>
+    <div class="result"><small>RESIDUO GC</small><b id="gcRes" style="font-size:13px">—</b><span>Relativo final</span></div>
+    <div class="result"><small>RESIDUO GCP</small><b id="gcpRes" style="font-size:13px">—</b><span>Relativo final</span></div>
+   </div><div class="note" id="algorithmNote">Ejecuta el análisis para visualizar los resultados.</div></div>
+   <div class="card"><h3>Convergencia del residuo</h3><div class="chartbox"><canvas id="convergenceChart"></canvas></div><div class="small muted">Eje vertical: residuo relativo · Eje horizontal: iteraciones</div></div>
+  </div>
+ </section>
+ <section class="section" id="errores">
+  <div class="sectionhead"><div><div class="kicker">07 / Diagnóstico numérico</div><h2>Errores y condicionamiento</h2><p>Errores por variable, residuo relativo global y número de condición.</p></div></div>
+  <div class="card">
+   <div class="resultgrid" style="grid-template-columns:repeat(3,1fr)">
+    <div class="result"><small>κ(A)</small><b id="condA">—</b><span>Matriz original</span></div>
+    <div class="result"><small>κ(M⁻¹A)</small><b id="condM">—</b><span>Matriz precondicionada</span></div>
+    <div class="result"><small>RESIDUO RELATIVO GCP</small><b id="globalRes">—</b><span>||b − Ax||₂ / ||b||₂</span></div>
+   </div>
+   <div class="tablewrap"><table class="data" id="errorTable"><thead><tr><th>Variable</th><th>Referencia</th><th>GCP</th><th>Error absoluto</th><th>Error relativo</th><th>Error porcentual</th></tr></thead><tbody></tbody></table></div>
+   <div class="note">El número de condición se calcula en norma 2 mediante los autovalores de A (matriz simétrica definida positiva): κ₂(A) = λmáx / λmín.</div>
+  </div>
+ </section>
+ <section class="section" id="qa">
+  <div class="sectionhead"><div><div class="kicker">08 / Calidad del software</div><h2>Módulo de pruebas QA</h2><p>Pruebas ejecutables de validación y comportamiento del sistema.</p></div><button class="btn ghost" id="qaBtn">⟳ Ejecutar pruebas QA</button></div>
+  <div class="card"><div class="tablewrap"><table class="data" id="qaTable"><thead><tr><th>Prueba</th><th>Entrada</th><th>Resultado esperado</th><th>Resultado obtenido</th><th>Conclusión</th></tr></thead><tbody></tbody></table></div><div class="note" id="qaSummary">Las pruebas se ejecutan en el navegador; pulsa «Ejecutar pruebas QA».</div></div>
+ </section>
+ <section class="section" id="conclusiones">
+  <div class="sectionhead"><div><div class="kicker">09 / Cierre técnico</div><h2>Conclusiones y referencias</h2></div></div>
+  <div class="grid2">
+   <div class="card"><h3>Conclusiones del modelo</h3><p>El modelo muestra cómo una organización tecnológica puede representar sus necesidades presupuestarias y dependencias mediante un sistema lineal.</p><p>La comparación entre GC y GCP permite estudiar el efecto del precondicionamiento sobre la convergencia. En particular, Jacobi corrige el mal escalamiento diagonal del escenario 3.</p><p>Desde Ingeniería de Sistemas, la herramienta integra modelado, validación, cálculo numérico y pruebas de software como apoyo a la toma de decisiones.</p></div>
+   <div class="card"><h3>Referencias bibliográficas</h3><p>Suñagua S., P. (2020). <i>Método de Gradientes Conjugados Precondicionado</i>. Revista Boliviana de Matemática – UMSA, 04, 2–7.</p><p>Golub, G. H., & Van Loan, C. F. (2013). <i>Matrix Computations</i> (4th ed.). Johns Hopkins University Press.</p><p>Saad, Y. (2003). <i>Iterative Methods for Sparse Linear Systems</i> (2nd ed.). SIAM.</p></div>
+  </div>
+ </section>
+ <footer class="footer"><span>FinSys · Laboratorio académico de métodos numéricos</span><span>Universidad Mayor de San Andrés · Ingeniería de Sistemas</span></footer>
+</main></div><div class="toast" id="toast"></div>
+<script>
+const scenarios={
+ ideal:{name:"Escenario ideal",A:[[4,1,0,0],[1,4,1,0],[0,1,4,1],[0,0,1,4]],b:[100,120,90,80],pre:"identity"},
+ stress:{name:"Bajo estrés financiero",A:[[4.8,1.1,0,0],[1.1,4.8,1.1,0],[0,1.1,4.8,1.1],[0,0,1.1,4.8]],b:[125,150,115,105],pre:"identity"},
+ bad:{name:"Mal condicionado",A:[[1,0,0,0],[0,10,0,0],[0,0,100,0],[0,0,0,10000]],b:[10,120,900,80000],pre:"jacobi"}
+};
+let current="ideal", A=[], b=[], latest=null;
+const $=id=>document.getElementById(id);
+const fmt=(v,d=6)=>Number(v).toLocaleString("es-BO",{maximumFractionDigits:d,minimumFractionDigits:0});
+const norm=v=>Math.sqrt(v.reduce((s,x)=>s+x*x,0));
+const dot=(a,b)=>a.reduce((s,x,i)=>s+x*b[i],0);
+const mv=(A,x)=>A.map(row=>dot(row,x));
+const sub=(a,b)=>a.map((x,i)=>x-b[i]);
+const add=(a,b)=>a.map((x,i)=>x+b[i]);
+const scale=(a,s)=>a.map(x=>x*s);
+function clone(x){return JSON.parse(JSON.stringify(x))}
+function showToast(s){let t=$("toast");t.textContent=s;t.classList.add("show");setTimeout(()=>t.classList.remove("show"),2400)}
+function renderInputs(){
+ let t='<tr><th></th>'+[1,2,3,4].map(i=>`<th>x${i}</th>`).join('')+'</tr>';
+ A.forEach((r,i)=>{t+=`<tr><th>a${i+1}</th>${r.map((v,j)=>`<td><input aria-label="a${i+1}${j+1}" type="number" step="any" value="${v}" data-i="${i}" data-j="${j}" class="aedit"></td>`).join('')}</tr>`});$("matrixA").innerHTML=t;
+ $("matrixA").querySelectorAll("input").forEach(el=>el.addEventListener("change",e=>{let i=+e.target.dataset.i,j=+e.target.dataset.j;A[i][j]=Number(e.target.value);if(i!==j){let mate=$("matrixA").querySelector(`[data-i="${j}"][data-j="${i}"]`);if(mate){mate.value=A[i][j];A[j][i]=A[i][j]}} validateOnly()}));
+ $("vectorB").innerHTML='<tr><th>Variable</th><th>Valor b</th></tr>'+b.map((v,i)=>`<tr><th>b${i+1}</th><td class="rhs"><input type="number" step="any" value="${v}" data-i="${i}"></td></tr>`).join('');
+ $("vectorB").querySelectorAll("input").forEach(el=>el.addEventListener("change",e=>{b[+e.target.dataset.i]=Number(e.target.value);validateOnly()}));
+}
+function loadScenario(key,run=true){current=key;A=clone(scenarios[key].A);b=clone(scenarios[key].b);document.querySelectorAll(".scenario").forEach(el=>el.classList.toggle("selected",el.dataset.scenario===key));$("scenarioPill").textContent=scenarios[key].name+" activo";$("precond").value="auto";renderInputs();validateOnly();if(run)runAnalysis()}
+document.querySelectorAll(".scenario").forEach(el=>el.addEventListener("click",()=>loadScenario(el.dataset.scenario)));
+$("resetBtn").addEventListener("click",()=>{loadScenario(current);showToast("Escenario restaurado")});
+function cholesky(A){let n=A.length,L=Array.from({length:n},()=>Array(n).fill(0));for(let i=0;i<n;i++)for(let j=0;j<=i;j++){let s=A[i][j];for(let k=0;k<j;k++)s-=L[i][k]*L[j][k];if(i===j){if(!(s>1e-14))throw Error("La matriz no es definida positiva.");L[i][j]=Math.sqrt(s)}else L[i][j]=s/L[j][j]}return L}
+function solveChol(A,b){let L=cholesky(A),n=b.length,y=Array(n).fill(0),x=Array(n).fill(0);for(let i=0;i<n;i++){let s=b[i];for(let j=0;j<i;j++)s-=L[i][j]*y[j];y[i]=s/L[i][i]}for(let i=n-1;i>=0;i--){let s=y[i];for(let j=i+1;j<n;j++)s-=L[j][i]*x[j];x[i]=s/L[i][i]}return x}
+function symmetric(A,tol=1e-10){return A.every((r,i)=>r.every((v,j)=>Math.abs(v-A[j][i])<tol))}
+function jacobiEigenvalues(M){let a=clone(M),n=a.length;for(let iter=0;iter<100*n*n;iter++){let p=0,q=1,max=0;for(let i=0;i<n;i++)for(let j=i+1;j<n;j++)if(Math.abs(a[i][j])>max){max=Math.abs(a[i][j]);p=i;q=j}if(max<1e-13)break;let phi=.5*Math.atan2(2*a[p][q],a[q][q]-a[p][p]),c=Math.cos(phi),s=Math.sin(phi);let app=c*c*a[p][p]-2*s*c*a[p][q]+s*s*a[q][q],aqq=s*s*a[p][p]+2*s*c*a[p][q]+c*c*a[q][q];for(let k=0;k<n;k++)if(k!==p&&k!==q){let akp=a[k][p],akq=a[k][q];a[k][p]=a[p][k]=c*akp-s*akq;a[k][q]=a[q][k]=s*akp+c*akq}a[p][p]=app;a[q][q]=aqq;a[p][q]=a[q][p]=0}return a.map((r,i)=>r[i]).sort((x,y)=>x-y)}
+function isSPD(A){if(!symmetric(A))return false;try{cholesky(A);return true}catch(e){return false}}
+function cond2(A){let ev=jacobiEigenvalues(A);if(ev[0]<=0)return Infinity;return ev[ev.length-1]/ev[0]}
+function preconditioner(A,kind){let n=A.length;if(kind==="identity")return Array.from({length:n},(_,i)=>Array.from({length:n},(_,j)=>i===j?1:0));if(kind==="jacobi")return A.map((r,i)=>r.map((v,j)=>i===j?v:0));return null}
+function preSolve(M,r){return solveChol(M,r)}
+function cg(A,b,tol,pre){let n=b.length,x=Array(n).fill(0),r=sub(b,mv(A,x)),z=pre?preSolve(pre,r):r.slice(),p=z.slice(),rz=dot(r,z),hist=[norm(r)/Math.max(norm(b),1e-300)],iter=0,maxit=Math.max(100,20*n);for(;iter<maxit&&hist[hist.length-1]>=tol;iter++){let Ap=mv(A,p),den=dot(p,Ap);if(!(den>0)||!Number.isFinite(den))break;let alpha=rz/den;x=add(x,scale(p,alpha));r=sub(r,scale(Ap,alpha));let rel=norm(r)/Math.max(norm(b),1e-300);hist.push(rel);if(rel<tol)break;z=pre?preSolve(pre,r):r.slice();let rznew=dot(r,z),beta=rznew/rz;p=add(z,scale(p,beta));rz=rznew}return {x,iter:hist.length-1,res:hist[hist.length-1],hist,converged:hist[hist.length-1]<tol}}
+function validateOnly(){let ok=A.length===4&&A.every(r=>r.every(Number.isFinite))&&b.every(Number.isFinite)&&symmetric(A)&&isSPD(A);$("validation").textContent=ok?"✓ Matriz simétrica y definida positiva. El sistema puede resolverse.":"⚠ Matriz inválida: revisa que todos los datos sean numéricos, A sea simétrica y definida positiva."; $("validation").style.borderLeftColor=ok?"var(--green)":"var(--red)";$("validStat").textContent=ok?"OK":"REVISAR";$("validStat").style.color=ok?"var(--green)":"var(--red)";return ok}
+
+function matrixHTML(M, title){
+ let s=`<div style="margin:12px 0"><b style="font-size:12px;color:#cfe2f7">${title}</b><div class="eq" style="overflow:auto"><table class="matrix"><tbody>`;
+ M.forEach(row=>{s+="<tr>"+row.map(v=>`<td style="text-align:center;background:#0a192a;border:1px solid #263d59;border-radius:6px;padding:7px">${fmt(v,7)}</td>`).join("")+"</tr>"});
+ return s+"</tbody></table></div></div>";
+}
+function vectorHTML(v,title){return `<div style="margin:10px 0"><b style="font-size:12px;color:#cfe2f7">${title}</b><div class="eq">(${v.map(x=>fmt(x,8)).join(", ")})ᵀ</div></div>`}
+function procedureCholesky(){
+ let n=A.length,L=Array.from({length:n},()=>Array(n).fill(0)),steps=[];
+ steps.push(`<h3>1. Planteamiento del sistema</h3><p class="muted small">Se parte de A·x = b. La matriz debe ser simétrica y definida positiva.</p>${matrixHTML(A,"Matriz A")}${vectorHTML(b,"Vector b")}`);
+ for(let i=0;i<n;i++)for(let j=0;j<=i;j++){
+  let terms=[];let sum=0;
+  for(let k=0;k<j;k++){sum+=L[i][k]*L[j][k];terms.push(`${fmt(L[i][k],6)} × ${fmt(L[j][k],6)}`)}
+  let raw=A[i][j]-sum;
+  if(i===j){if(raw<=0)throw Error("No se puede realizar Cholesky: la matriz no es definida positiva.");L[i][j]=Math.sqrt(raw);
+   steps.push(`<div class="note"><b>2.${i+1}.${j+1} · Elemento L${i+1}${j+1} (diagonal)</b><br>L${i+1}${j+1} = √(a${i+1}${j+1} − Σ L${i+1}k²) = √(${fmt(A[i][j],8)} − (${terms.join(" + ")||"0"})) = <b>${fmt(L[i][j],9)}</b></div>`);
+  }else{L[i][j]=raw/L[j][j];
+   steps.push(`<div class="note"><b>2.${i+1}.${j+1} · Elemento L${i+1}${j+1}</b><br>L${i+1}${j+1} = (a${i+1}${j+1} − Σ L${i+1}k L${j+1}k) / L${j+1}${j+1}<br>= (${fmt(A[i][j],8)} − (${terms.join(" + ")||"0"})) / ${fmt(L[j][j],8)} = <b>${fmt(L[i][j],9)}</b></div>`);
+  }
+ }
+ steps.push(`<h3>2. Factorización de Cholesky</h3><p class="muted small">Se obtiene A = L·Lᵀ.</p>${matrixHTML(L,"Matriz triangular inferior L")}${matrixHTML(L.map((r,i)=>L.map((row,j)=>L[j][i])),"Matriz Lᵀ")}`);
+ let y=Array(n).fill(0),fwd=[];
+ for(let i=0;i<n;i++){let sum=0,terms=[];for(let j=0;j<i;j++){sum+=L[i][j]*y[j];terms.push(`${fmt(L[i][j],6)}(${fmt(y[j],6)})`)}y[i]=(b[i]-sum)/L[i][i];fwd.push(`<div class="note"><b>3.${i+1} · Sustitución hacia adelante</b><br>${fmt(L[i][i],7)}·y${i+1} = ${fmt(b[i],7)} − (${terms.join(" + ")||"0"})<br><b>y${i+1} = ${fmt(y[i],9)}</b></div>`)}
+ steps.push(`<h3>3. Resolver L·y = b</h3><p class="muted small">Se calcula y de arriba hacia abajo.</p>${fwd.join("")}${vectorHTML(y,"Vector y")}`);
+ let x=Array(n).fill(0),back=[];
+ for(let i=n-1;i>=0;i--){let sum=0,terms=[];for(let j=i+1;j<n;j++){sum+=L[j][i]*x[j];terms.push(`${fmt(L[j][i],6)}(${fmt(x[j],6)})`)}x[i]=(y[i]-sum)/L[i][i];back.push(`<div class="note"><b>4.${i+1} · Sustitución hacia atrás</b><br>${fmt(L[i][i],7)}·x${i+1} = ${fmt(y[i],7)} − (${terms.join(" + ")||"0"})<br><b>x${i+1} = ${fmt(x[i],9)}</b></div>`)}
+ steps.push(`<h3>4. Resolver Lᵀ·x = y</h3><p class="muted small">Se calcula x desde la última fila hacia la primera.</p>${back.join("")}${vectorHTML(x,"Solución de referencia x")}`);
+ steps.push(`<h3>5. Comprobación</h3><p class="eq">r = b − A·x</p>${vectorHTML(sub(b,mv(A,x)),"Residuo (debe aproximarse a cero)")}`);
+ return steps.join("");
+}
+function procedureIterative(pre){
+ let tol=Number($("tol").value),n=b.length,kind=pre?"GCP":"GC",M=pre?preconditioner(A,latest?.kind||scenarios[current].pre):null;
+ let x=Array(n).fill(0),r=sub(b,mv(A,x)),z=pre?preSolve(M,r):r.slice(),p=z.slice(),rz=dot(r,z),rows=[],hist=[];
+ let rel=norm(r)/Math.max(norm(b),1e-300);hist.push(rel);
+ rows.push({k:0,x:x.slice(),r:r.slice(),z:z.slice(),p:p.slice(),alpha:"—",beta:"—",rel});
+ let maxit=100;
+ for(let k=0;k<maxit&&rel>=tol;k++){
+  let Ap=mv(A,p),den=dot(p,Ap),alpha=rz/den;
+  x=add(x,scale(p,alpha));let rn=sub(r,scale(Ap,alpha));let reln=norm(rn)/Math.max(norm(b),1e-300);
+  let zn=pre?preSolve(M,rn):rn.slice(),rzn=dot(rn,zn),beta=(Math.abs(rz)>1e-300)?rzn/rz:0;
+  let pn=add(zn,scale(p,beta));
+  rows.push({k:k+1,x:x.slice(),r:rn.slice(),z:zn.slice(),p:pn.slice(),alpha,beta,rel:reln});
+  r=rn;z=zn;p=pn;rz=rzn;rel=reln;hist.push(rel);
+ }
+ let intro=pre?`GCP: se resuelve M·z = r y se utiliza z en lugar de r para construir las direcciones. Precondicionador ${latest?.kind==="jacobi"?"Jacobi (diagonal de A)":"identidad"}.`:"GC: se utiliza el residuo directamente, sin precondicionador.";
+ let body=`<h3>1. Inicialización</h3><p>${intro}</p><p class="eq">x₀ = 0; r₀ = b − A·x₀; ${pre?"M·z₀ = r₀; p₀ = z₀":"p₀ = r₀"}</p>${vectorHTML(r,"Residuo inicial r₀")}${pre?vectorHTML(z,"Vector precondicionado z₀"):""}${vectorHTML(p,"Dirección inicial p₀")}<h3>2. Iteraciones calculadas</h3><p class="muted small">Cada fila muestra los vectores después de actualizar x y r. α = (rᵀz)/(pᵀAp); β = (rₙᵤₑᵥₒᵀzₙᵤₑᵥₒ)/(rᵀz).</p>`;
+ body+=`<div class="tablewrap"><table class="data"><thead><tr><th>k</th><th>αₖ</th><th>βₖ</th><th>xₖ</th><th>‖rₖ‖₂ / ‖b‖₂</th></tr></thead><tbody>`;
+ rows.forEach(o=>{body+=`<tr><td>${o.k}</td><td>${typeof o.alpha==="number"?o.alpha.toExponential(4):"—"}</td><td>${typeof o.beta==="number"?o.beta.toExponential(4):"—"}</td><td class="mono">(${o.x.map(v=>fmt(v,5)).join(", ")})</td><td>${o.rel.toExponential(4)}</td></tr>`});
+ body+="</tbody></table></div>";
+ rows.forEach(o=>{if(o.k===0)return;body+=`<div class="note"><b>Iteración k = ${o.k}</b><br>α${o.k-1} = ${o.alpha.toPrecision(9)}; β${o.k-1} = ${o.beta.toPrecision(9)}<br>x${o.k} = (${o.x.map(v=>fmt(v,8)).join(", ")})<br>r${o.k} = (${o.r.map(v=>fmt(v,8)).join(", ")})<br>${pre?"z": "r"}${o.k} = (${o.z.map(v=>fmt(v,8)).join(", ")})<br>p${o.k} = (${o.p.map(v=>fmt(v,8)).join(", ")})<br>Residuo relativo = ${o.rel.toExponential(5)}</div>`});
+ body+=`<h3>3. Criterio de parada</h3><p class="eq">‖rₖ‖₂ / ‖b‖₂ = ${rel.toExponential(6)} ${rel<tol?"<":"≥"} ${tol}</p><p class="${rel<tol?"good":"warn"}"><b>${rel<tol?"Convergencia alcanzada.":"No se alcanzó la tolerancia con el máximo de iteraciones."}</b></p>${vectorHTML(x,"Solución aproximada obtenida por "+kind)}`;
+ return body;
+}
+function showProcedure(){
+ if(!validateOnly()){showToast("Corrige la matriz antes de mostrar el procedimiento.");return}
+ try{
+  if(!latest)runAnalysis();
+  let method=$("procedureMethod").value,htmlOut=method==="chol"?procedureCholesky():procedureIterative(method==="gcp");
+  $("procedureContent").innerHTML=htmlOut;
+ }catch(e){$("procedureContent").innerHTML=`<div class="note" style="border-color:var(--red)">No se pudo desarrollar el procedimiento: ${e.message}</div>`}
+}
+$("procedureBtn").addEventListener("click",showProcedure);
+$("procedureMethod").addEventListener("change",showProcedure);
+
+function runAnalysis(){try{if(!validateOnly())throw Error("No se ejecutó: la matriz debe ser simétrica y definida positiva.");let tol=Number($("tol").value);if(!(tol>0&&tol<1))throw Error("La tolerancia debe ser mayor que 0 y menor que 1.");let ref=solveChol(A,b),gc=cg(A,b,tol,null),choice=$("precond").value,kind=choice==="auto"?scenarios[current].pre:choice,M=preconditioner(A,kind),gcp=cg(A,b,tol,M);let MA=Array.from({length:4},(_,i)=>Array.from({length:4},(_,j)=>A[i][j]/Math.sqrt(M[i][i]*M[j][j])));let eigA=cond2(A),eigM=cond2(MA);latest={ref,gc,gcp,kind,eigA,eigM,tol};renderResults();showToast("Análisis completado correctamente")}catch(e){$("validation").textContent="⚠ "+e.message;$("validation").style.borderLeftColor="var(--red)";showToast(e.message)}}
+function renderResults(){let {ref,gc,gcp,kind,eigA,eigM}=latest;let labels=["Infraestructura","Desarrollo","Seguridad","Soporte"];$("referenceResults").innerHTML=ref.map((v,i)=>`<div class="result"><small>${labels[i]}</small><b>${fmt(v,5)}</b><span>miles de Bs · x${i+1}</span></div>`).join("");$("referenceNote").textContent="Solución por Cholesky: x = ("+ref.map(v=>fmt(v,6)).join("; ")+") miles de Bs.";
+$("gcIter").textContent=gc.iter;$("gcpIter").textContent=gcp.iter;$("gcRes").textContent=gc.res.toExponential(2);$("gcpRes").textContent=gcp.res.toExponential(2);
+$("algorithmNote").textContent=`Precondicionador: ${kind==="jacobi"?"Jacobi diagonal": "Identidad"}. GC ${gc.converged?"alcanzó":"no alcanzó"} la tolerancia; GCP ${gcp.converged?"alcanzó":"no alcanzó"} la tolerancia.`;
+$("condA").textContent=fmt(eigA,5);$("condM").textContent=fmt(eigM,5);$("globalRes").textContent=gcp.res.toExponential(2);
+let body=$("errorTable").querySelector("tbody");body.innerHTML=ref.map((v,i)=>{let ea=Math.abs(v-gcp.x[i]),er=v===0?null:ea/Math.abs(v);return `<tr><td>x${i+1}</td><td>${fmt(v,8)}</td><td>${fmt(gcp.x[i],8)}</td><td>${ea.toExponential(2)}</td><td>${er===null?"No definido":er.toExponential(2)}</td><td>${er===null?"No definido":(er*100).toExponential(2)+"%"}</td></tr>`}).join("");drawChart(gc.hist,gcp.hist);
+}
+function drawChart(a,b){let c=$("convergenceChart"),ctx=c.getContext("2d"),w=c.clientWidth,h=c.clientHeight,dpr=window.devicePixelRatio||1;c.width=w*dpr;c.height=h*dpr;ctx.scale(dpr,dpr);ctx.clearRect(0,0,w,h);let all=[...a,...b].filter(v=>v>0),max=Math.max(...all,1),min=Math.min(...all,1e-16),top=18,bottom=h-30,left=42,right=w-12;ctx.strokeStyle="#263c56";ctx.lineWidth=1;for(let k=0;k<5;k++){let y=top+(bottom-top)*k/4;ctx.beginPath();ctx.moveTo(left,y);ctx.lineTo(right,y);ctx.stroke();ctx.fillStyle="#8298b6";ctx.font="9px sans-serif";ctx.fillText((max*Math.pow(min/max,k/4)).toExponential(0),2,y+3)}let xmax=Math.max(a.length,b.length,2);function plot(vals,color){ctx.strokeStyle=color;ctx.lineWidth=2.4;ctx.beginPath();vals.forEach((v,i)=>{let x=left+(right-left)*i/(xmax-1),y=top+(bottom-top)*(Math.log10(Math.max(v,min))-Math.log10(max))/(Math.log10(min)-Math.log10(max));if(i===0)ctx.moveTo(x,y);else ctx.lineTo(x,y)});ctx.stroke()}plot(a,"#6ea8fe");plot(b,"#50e3d2");ctx.fillStyle="#6ea8fe";ctx.fillRect(left, h-12, 12, 3);ctx.fillStyle="#a9bad1";ctx.fillText("GC",left+17,h-9);ctx.fillStyle="#50e3d2";ctx.fillRect(left+60,h-12,12,3);ctx.fillStyle="#a9bad1";ctx.fillText("GCP",left+77,h-9)}
+$("runBtn").addEventListener("click",runAnalysis);
+$("precond").addEventListener("change",()=>{if(latest)runAnalysis()});
+$("tol").addEventListener("change",()=>{if(latest)runAnalysis()});
+function runQA(){let rows=[];let addQA=(name,input,expected,obtained,ok)=>rows.push({name,input,expected,obtained,ok});let s1=isSPD(scenarios.ideal.A)&&isSPD(scenarios.stress.A)&&isSPD(scenarios.bad.A);addQA("Carga de escenarios","Matrices predefinidas","Los 3 escenarios son SPD",s1?"Los 3 escenarios son SPD":"Alguna matriz no válida",s1);
+let nonsym=[[2,1],[0,2]];let s2=!symmetric(nonsym);addQA("Matriz no simétrica","A ≠ Aᵀ","El validador la rechaza",s2?"Rechazada correctamente":"No detectada",s2);
+let nonspd=[[1,2],[2,1]];let s3=!isSPD(nonspd);addQA("Matriz no definida positiva","Autovalor negativo","El validador la rechaza",s3?"Rechazada correctamente":"No detectada",s3);
+let changed=clone(scenarios.ideal.A);changed[0][0]+=1;let s4=Math.abs(solveChol(changed,scenarios.ideal.b)[0]-solveChol(scenarios.ideal.A,scenarios.ideal.b)[0])>1e-8;addQA("Edición dinámica","Modificar a₁₁ de 4 a 5","La solución cambia",s4?"La solución cambia al editar A":"No cambió",s4);
+let bad=scenarios.bad.A,bb=scenarios.bad.b,t=1e-6,g=cg(bad,bb,t,null),M=preconditioner(bad,"jacobi"),gp=cg(bad,bb,t,M),s5=gp.converged&&g.converged&&gp.iter<=g.iter;addQA("Comparación GC / GCP","Escenario mal condicionado","GCP converge en ≤ iteraciones que GC",`GC: ${g.iter}; GCP: ${gp.iter}`,s5);
+$("qaTable").querySelector("tbody").innerHTML=rows.map(r=>`<tr><td>${r.name}</td><td>${r.input}</td><td>${r.expected}</td><td>${r.obtained}</td><td class="${r.ok?"qa-pass":"bad"}">${r.ok?"APROBADA":"FALLIDA"}</td></tr>`).join("");let passed=rows.filter(r=>r.ok).length;$("qaSummary").textContent=`Resultado de QA: ${passed}/${rows.length} pruebas aprobadas. Estas pruebas se ejecutaron en el navegador.`;showToast(`QA: ${passed}/${rows.length} pruebas aprobadas`)}
+$("qaBtn").addEventListener("click",runQA);
+const links=[...document.querySelectorAll(".nav a")];const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){links.forEach(a=>a.classList.toggle("active",a.getAttribute("href")==="#"+e.target.id))}}),{rootMargin:"-25% 0px -65% 0px"});document.querySelectorAll("main section[id]").forEach(s=>observer.observe(s));
+window.addEventListener("resize",()=>{if(latest)drawChart(latest.gc.hist,latest.gcp.hist)});
+loadScenario("ideal");
+showProcedure();
+</script>
+</body></html>
